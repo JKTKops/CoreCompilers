@@ -11,8 +11,8 @@ extra-source-files:
 - ChangeLog.md
 
 # Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Web
+# synopsis:            Working through SPJ and DRL's "Implementing Functional Languages"
+# category:            Compilers
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
@@ -22,11 +22,19 @@ description:         Please see the README on GitHub at <https://github.com/JKTK
 dependencies:
 - base >= 4.7 && < 5
 
+default-extensions:
+- ApplicativeDo
+- GeneralizedNewtypeDeriving
+- LambdaCase
+- MultiParamTypeClasses
+- OverloadedStrings
+- TupleSections
+
 library:
   source-dirs: src
 
 executables:
-  CoreCompilers-exe:
+  core-compilers:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -37,7 +45,7 @@ executables:
     - CoreCompilers
 
 tests:
-  CoreCompilers-test:
+  core-compilers-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
