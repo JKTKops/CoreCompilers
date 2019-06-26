@@ -24,11 +24,15 @@ dependencies:
 
 default-extensions:
 - ApplicativeDo
+- BangPatterns
 - GeneralizedNewtypeDeriving
 - LambdaCase
 - MultiParamTypeClasses
+- NamedFieldPuns
 - OverloadedStrings
+- PatternGuards
 - TupleSections
+- ViewPatterns
 
 library:
   source-dirs: src

@@ -7,7 +7,7 @@ type Addr = Integer
 type Size = Integer
 
 data Heap a = Heap Size [Addr] (Map Addr a)
-  deriving (Eq)
+  deriving Eq
 
 instance Show a => Show (Heap a) where
     show (Heap size _ assocs) = "Heap (size = " ++ show size ++ ") " ++ show assocs
